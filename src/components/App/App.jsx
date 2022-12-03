@@ -22,7 +22,11 @@ class App extends React.Component {
     return (
       <>
         <Feedback onButtonClick={this.raitingButtonClick} />
-        <Statistics />
+        <Statistics 
+          good={this.state.good}
+          neutral={this.state.neutral}
+          bad={this.state.bad}
+        />
       </>
     )
   } 

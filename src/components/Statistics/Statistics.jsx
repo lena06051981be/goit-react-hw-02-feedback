@@ -1,13 +1,13 @@
 import React from "react";
 
-const Statistics = () => {
+const Statistics = ({good, neutral, bad}) => {
     return (
         <div>
             <h2>Statistics</h2>
             <ul>
-                <li>Good:</li>
-                <li>Neutral:</li>
-                <li>Bad:</li>
+                <li>Good: {good}</li>
+                <li>Neutral: {neutral}</li>
+                <li>Bad: {bad}</li>
             </ul>
         </div>
     )
