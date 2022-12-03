@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Feedback = () => {
+// export
+ const Feedback = () => {
     return (
         <div>
             <h1>Please leave feedback</h1>
@@ -9,6 +10,14 @@ const Feedback = () => {
                 <button>Neutral</button>
                 <button>Bad</button>
             </ul>
+            <div>
+                <h2>Statistics</h2>
+                <ul>
+                    <li>Good:</li>
+                    <li>Neutral:</li>
+                    <li>Bad:</li>
+                </ul>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import  Feedback  from '../Feedback/Feedback.js'
+import  Feedback  from '../Feedback/Feedback.jsx'
 
 
 export const App = () => {
