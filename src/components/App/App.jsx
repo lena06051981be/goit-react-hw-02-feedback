@@ -10,6 +10,10 @@ class App extends React.Component {
     bad: 0,
   };
 
+  raitingButtonClick = () => {
+
+  };
+
   countTotalFeedback = () => {};
 
   countPositiveFeedbackPercentage = () => {};
@@ -17,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Feedback />
+        <Feedback onButtonClick={this.raitingButtonClick} />
         <Statistics />
       </>
     )

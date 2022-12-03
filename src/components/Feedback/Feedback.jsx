@@ -1,16 +1,15 @@
 import React from 'react';
 
 // export
- const Feedback = () => {
+ const Feedback = ({raitingButtonClick}) => {
     return (
         <div>
             <h1>Please leave feedback</h1>
             <ul>                    
-                <button>Good</button>
-                <button>Neutral</button>
-                <button>Bad</button>
-            </ul>
-            
+                <button onClick={raitingButtonClick}>Good</button>
+                <button onClick={raitingButtonClick}>Neutral</button>
+                <button onClick={raitingButtonClick}>Bad</button>
+            </ul>            
         </div>
     )
 }
