@@ -2,13 +2,23 @@ import React from 'react'
 import  Feedback  from '../Feedback/Feedback.jsx'
 
 
-export const App = () => {
-  return (
-    <>
-      <Feedback />
-    </>
-  )
+class App extends React.Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0
+  }
+
+  render() {
+    return (
+      <>
+        <Feedback />
+      </>
+    )
+  } 
 }
+
+export default App
 
 // export const App = () => {
 //   return (
