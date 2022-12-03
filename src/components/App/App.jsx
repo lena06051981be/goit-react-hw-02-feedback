@@ -10,7 +10,10 @@ class App extends React.Component {
     bad: 0,
   };
 
-  raitingButtonClick = () => {
+  ratingButtonClick = () => {
+    this.setState(prevState => ({
+      value: prevState.value + 1,
+    }) )
 
   };
 
@@ -21,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Feedback onButtonClick={this.raitingButtonClick} />
+        <Feedback onButtonClick={this.ratingButtonClick} />
         <Statistics 
           good={this.state.good}
           neutral={this.state.neutral}
