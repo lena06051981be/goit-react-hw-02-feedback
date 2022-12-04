@@ -10,10 +10,10 @@ class App extends React.Component {
     bad: 0,
   };
 
-  ratingButtonClick = good => {
-    this.setState(prevState => ({
-      good: prevState + 1,
-    }));
+  ratingButtonClick() {
+    this.setState((state) => {
+      return {good: state.good + 22}
+    });
   };
 
  
