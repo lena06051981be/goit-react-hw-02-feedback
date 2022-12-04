@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Feedback = ({typesButton, ratingButtonClick}) => {    
+const Feedback = ({options, onButtonClick}) => {    
     return (
         <div>
             <h1>Please leave feedback</h1>
             <ul>
-            {typesButton.map(type => {
+            {options.map(item => {
                 return (
                         <button
-                            key={type}
+                            key={item}
                             type="button"
-                            onClick={ratingButtonClick}
+                            onClick={() => {onButtonClick(item)}}
                         >
-                            {type}
+                            {item}
                         </button>
                     );
             })}

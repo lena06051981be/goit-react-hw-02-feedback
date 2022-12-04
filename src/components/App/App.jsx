@@ -11,10 +11,10 @@ class App extends React.Component {
     bad: 0,
   };
 
-  ratingButtonClick = event => {
+  ratingButtonClick = options => {
     this.setState(prevState => ({
-      [event]: prevState[event] + 1 }));
-      console.log(event);
+      [options]: prevState[options] + 1 }));
+      console.log(options);
   }
 
   // ratingButtonClick = type => {
@@ -39,12 +39,12 @@ class App extends React.Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const typesButton = Object.keys(this.state);
+    const options = Object.keys(this.state);
 
     return (
       <>
         <Feedback 
-          typesButton={typesButton}
+          options={options}
           onButtonClick={this.ratingButtonClick} />
         <Statistics 
           good={good}
