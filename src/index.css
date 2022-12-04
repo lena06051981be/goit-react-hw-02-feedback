@@ -7,9 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../src/img/bg43.jpg);
+  background-color: rgb(116, 188, 230);
+  /* background-image: url(../src/img/bg43.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   letter-spacing: 0.09em;
 }
 
