@@ -17,8 +17,9 @@ export const FeedbackBtn = styled.button`
     border-radius: 12px;
 
     background-color: white;
-    color: #250F99;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: #1184a7;
+    color: darkblue;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
     text-transform: capitalize;
     font-size: 25px;
@@ -27,8 +28,8 @@ export const FeedbackBtn = styled.button`
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    background-color: #4b98f5;
+    background-color: #145974;
     color: #eee;
-    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 0px 1px rgba(255, 255, 255, 0.2);
   }
 `;

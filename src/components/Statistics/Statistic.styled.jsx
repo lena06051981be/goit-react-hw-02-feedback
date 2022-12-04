@@ -8,8 +8,9 @@ export const StatisticsList = styled.ul`
     text-align: start;
     text-transform: capitalize;
     font-size: 25px;
-    color: white;
-    text-shadow: 1px 1px 1px #260f99a2;
+    font-weight: 600;
+    color: darkblue;
+    /* text-shadow: 1px 1px 1px #f7f7f79f; */
 
     display: flex;
     flex-direction: column;
