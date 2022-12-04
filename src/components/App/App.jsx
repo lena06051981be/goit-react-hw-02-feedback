@@ -11,24 +11,12 @@ class App extends React.Component {
     bad: 0,
   };
 
-  ratingButtonClick = options => {
+  ratingButtonClick = item => {
     this.setState(prevState => ({
-      [options]: prevState[options] + 1 }));
-      console.log(options);
-  }
-
-  // ratingButtonClick = type => {
-  //   this.setState(prevState => ({
-  //     [type]: prevState[type] + 1,
-  //   }));
-  // };
-
-  // ratingButtonClick() {
-  //   this.setState((state) => {
-  //     return {good: state.good + 22}
-  //   });
-  // };
-
+      [item]: prevState[item] + 1,
+    })); 
+    console.log(item);
+  };
  
   // ratingButtonClick = () => {this.setState({
   //   good: this.state.good + 33})};
@@ -39,12 +27,11 @@ class App extends React.Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const options = Object.keys(this.state);
 
     return (
       <>
         <Feedback 
-          options={options}
+          options={Object.keys(this.state)}
           onButtonClick={this.ratingButtonClick} />
         <Statistics 
           good={good}
