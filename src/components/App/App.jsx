@@ -21,7 +21,8 @@ class App extends React.Component {
   // ratingButtonClick = () => {this.setState({
   //   good: this.state.good + 33})};
 
-  countTotalFeedback = () => {};
+  countTotalFeedback = () => 
+  Object.values(this.state).reduce((acc, value) => acc + value);
 
   countPositiveFeedbackPercentage = () => {};
 
@@ -32,11 +33,13 @@ class App extends React.Component {
       <>
         <Feedback 
           options={Object.keys(this.state)}
-          onButtonClick={this.ratingButtonClick} />
+          onButtonClick={this.ratingButtonClick} 
+        />
         <Statistics 
           good={good}
           neutral={neutral}
           bad={bad}
+          total={this.countTotalFeedback()}
         />
       </>
     )
