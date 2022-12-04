@@ -44,11 +44,7 @@ class App extends React.Component {
         </Section>
 
         <Section title="Statistics:">
-          {
-            (totalFeedback === 0) 
-            ? (   
-            <Notification  message="There is no feedback" />
-            ) : (          
+          {totalFeedback ? ( 
               <Statistics 
                 good={good}
                 neutral={neutral}
@@ -56,7 +52,10 @@ class App extends React.Component {
                 total={this.countTotalFeedback()}
                 PositivePercentage=
                 {positiveFeedback ? positiveFeedback : 0 }
-              /> )                          
+              />           
+            ) : (    
+              <Notification  message="There is no feedback" />      
+               )                          
           }          
         </Section>        
       </>
