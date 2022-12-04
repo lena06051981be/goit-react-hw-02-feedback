@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const SectionStyle = styled.section`
     margin: 0 auto;
     margin-top: 40px;
-    /* margin-left: 20px; */
     padding: 40px 15px;
     width: 480px;
     
@@ -12,7 +11,6 @@ export const SectionStyle = styled.section`
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
     
     background-color: #64edcf;
-    /* font-family: 'Roboto'; */
     
     text-align: center;
 `

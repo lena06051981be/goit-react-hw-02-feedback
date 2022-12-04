@@ -17,7 +17,6 @@ export const FeedbackBtn = styled.button`
     border-radius: 12px;
 
     background-color: white;
-    color: #1184a7;
     color: darkblue;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
