@@ -1,4 +1,5 @@
 // import { type } from '@testing-library/user-event/dist/type/index.js';
+import { Notification } from 'components/Notification/Notification.jsx';
 import Section from 'components/Section/Section.jsx';
 import Statistics from 'components/Statistics/Statistics.jsx';
 import React from 'react'
@@ -30,7 +31,8 @@ class App extends React.Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const positiveFeedback =this.countPositiveFeedbackPercentage()
+    const positiveFeedback =this.countPositiveFeedbackPercentage();
+    const totalFeedback = this.countTotalFeedback;
 
     return (
       <>
@@ -42,17 +44,18 @@ class App extends React.Component {
         </Section>
 
         <Section title={"Statistics"}>
-          <Statistics 
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={this.countTotalFeedback()}
-            PositivePercentage=
-            {positiveFeedback ? positiveFeedback : 0 }
-          />
-        </Section>
-       
-        
+          {totalFeedback ? (            
+              <Statistics 
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={this.countTotalFeedback()}
+                PositivePercentage=
+                {positiveFeedback ? positiveFeedback : 0 }
+              /> ) : (  
+              <Notification message="There is no feedback"/>)             
+          }          
+        </Section>        
       </>
     )
   } 
