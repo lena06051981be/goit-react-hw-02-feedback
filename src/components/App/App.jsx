@@ -29,6 +29,7 @@ class App extends React.Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const positiveFeedback =this.countPositiveFeedbackPercentage()
 
     return (
       <>
@@ -41,7 +42,8 @@ class App extends React.Component {
           neutral={neutral}
           bad={bad}
           total={this.countTotalFeedback()}
-          PositivePercentage={this.countPositiveFeedbackPercentage()}
+          PositivePercentage=
+          {positiveFeedback ? positiveFeedback : 0 }
         />
       </>
     )
