@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {    
     return (
@@ -18,6 +18,12 @@ const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {
             </ul>            
         </div>
     )
+}
+
+FeedbaFeedbackOptions.prototype = {
+    // options: PropTypes.object.isRequired,
+    options: PropTypes.arrayOf(PropTypes.string,).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired
 }
 
 
