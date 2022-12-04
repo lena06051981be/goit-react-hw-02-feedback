@@ -1,3 +1,4 @@
+// import { type } from '@testing-library/user-event/dist/type/index.js';
 import Statistics from 'components/Statistics/Statistics.jsx';
 import React from 'react'
 import  Feedback  from '../Feedback/Feedback.jsx'
@@ -10,11 +11,23 @@ class App extends React.Component {
     bad: 0,
   };
 
-  ratingButtonClick() {
-    this.setState((state) => {
-      return {good: state.good + 22}
-    });
-  };
+  ratingButtonClick = event => {
+    this.setState(prevState => ({
+      [event]: prevState[event] + 1 }));
+      console.log(event);
+  }
+
+  // ratingButtonClick = type => {
+  //   this.setState(prevState => ({
+  //     [type]: prevState[type] + 1,
+  //   }));
+  // };
+
+  // ratingButtonClick() {
+  //   this.setState((state) => {
+  //     return {good: state.good + 22}
+  //   });
+  // };
 
  
   // ratingButtonClick = () => {this.setState({
@@ -25,17 +38,18 @@ class App extends React.Component {
   countPositiveFeedbackPercentage = () => {};
 
   render() {
+    const { good, neutral, bad } = this.state;
+    const typesButton = Object.keys(this.state);
+
     return (
       <>
         <Feedback 
-        good={this.state.good}
-        neutral={this.state.neutral}
-        bad={this.state.bad}
-        onButtonClick={this.ratingButtonClick} />
+          typesButton={typesButton}
+          onButtonClick={this.ratingButtonClick} />
         <Statistics 
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
+          good={good}
+          neutral={neutral}
+          bad={bad}
         />
       </>
     )
