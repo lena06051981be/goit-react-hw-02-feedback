@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { FeedbackBtn } from './Feedback.styled';
 
 const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {    
     return (
@@ -6,13 +7,13 @@ const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {
             <ul>
             {options.map(item => {
                 return (
-                        <button
+                        <FeedbackBtn
                             key={item}
                             type="button"
                             onClick={() => {onLeaveFeedback(item)}}
                         >
                             {item}
-                        </button>
+                        </FeedbackBtn>
                     );
             })}
             </ul>            
