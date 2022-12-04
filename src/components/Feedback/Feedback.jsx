@@ -1,16 +1,15 @@
 import React from 'react';
 
-const Feedback = ({options, onButtonClick}) => {    
+const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {    
     return (
         <div>
-            <h1>Please leave feedback</h1>
             <ul>
             {options.map(item => {
                 return (
                         <button
                             key={item}
                             type="button"
-                            onClick={() => {onButtonClick(item)}}
+                            onClick={() => {onLeaveFeedback(item)}}
                         >
                             {item}
                         </button>
@@ -34,4 +33,4 @@ const Feedback = ({options, onButtonClick}) => {
 // )
 // }
 
-export default Feedback;
+export default FeedbaFeedbackOptions;
