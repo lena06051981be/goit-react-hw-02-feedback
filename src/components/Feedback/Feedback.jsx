@@ -1,12 +1,12 @@
 import React from 'react';
 
-// export
- const Feedback = ({ratingButtonClick}) => {
+const Feedback = ({good, neutral, bad, ratingButtonClick}) => {
     return (
         <div>
             <h1>Please leave feedback</h1>
-            <ul>                    
-                <button onClick={ratingButtonClick}>Good</button>
+            <ul>
+                <p>{good}</p>                    
+                <button type='botton' key={good} onClick={() => ratingButtonClick({good})}>Good</button>
                 <button onClick={ratingButtonClick}>Neutral</button>
                 <button onClick={ratingButtonClick}>Bad</button>
             </ul>            

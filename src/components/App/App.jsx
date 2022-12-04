@@ -10,12 +10,15 @@ class App extends React.Component {
     bad: 0,
   };
 
-  ratingButtonClick = () => {
+  ratingButtonClick = good => {
     this.setState(prevState => ({
-      value: prevState.value + 1,
-    }) )
-
+      good: prevState + 1,
+    }));
   };
+
+ 
+  // ratingButtonClick = () => {this.setState({
+  //   good: this.state.good + 33})};
 
   countTotalFeedback = () => {};
 
@@ -24,7 +27,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Feedback onButtonClick={this.ratingButtonClick} />
+        <Feedback 
+        good={this.state.good}
+        neutral={this.state.neutral}
+        bad={this.state.bad}
+        onButtonClick={this.ratingButtonClick} />
         <Statistics 
           good={this.state.good}
           neutral={this.state.neutral}
@@ -35,21 +42,6 @@ class App extends React.Component {
   } 
 }
 
+
 export default App
 
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template FEEDBACK
-//     </div>
-//   );
-// };
