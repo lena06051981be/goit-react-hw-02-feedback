@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Notice } from './Notification.styled';
 
 const Notification = ({ message }) => {
-    return <p style={{ textAlign: 'center' }}>{message}</p>;
+    return <Notice style={{ textAlign: 'center' }}>{message}</Notice>;
   };
 
 Notification.propTypes = {
