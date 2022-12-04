@@ -1,5 +1,4 @@
-// import { type } from '@testing-library/user-event/dist/type/index.js';
-import Notification from 'components/Notification/Notification.jsx';
+import Notification from '../Notification/Notification.jsx'
 import Section from 'components/Section/Section.jsx';
 import Statistics from 'components/Statistics/Statistics.jsx';
 import React from 'react'
@@ -54,7 +53,7 @@ class App extends React.Component {
                 {positiveFeedback ? positiveFeedback : 0 }
               />           
             ) : (    
-              <Notification  message="There is no feedback" />      
+              <Notification  message="There is no one feedback" />      
                )                          
           }          
         </Section>        
