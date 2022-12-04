@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
-// export const FeedbackBtn = styled.button``
+export const FeedbackList = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+`
 
 export const FeedbackBtn = styled.button`
     cursor: pointer;

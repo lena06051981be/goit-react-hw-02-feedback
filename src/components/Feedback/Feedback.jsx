@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { FeedbackBtn } from './Feedback.styled';
+import { FeedbackList, FeedbackBtn } from './Feedback.styled';
 
 const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {    
     return (
         <div>
-            <ul>
+            <FeedbackList>
             {options.map(item => {
                 return (
                         <FeedbackBtn
@@ -16,7 +16,7 @@ const FeedbaFeedbackOptions = ({options, onLeaveFeedback}) => {
                         </FeedbackBtn>
                     );
             })}
-            </ul>            
+            </FeedbackList>            
         </div>
     )
 }
