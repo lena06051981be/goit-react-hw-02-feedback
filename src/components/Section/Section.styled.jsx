@@ -13,3 +13,12 @@ export const SectionStyle = styled.section`
     
     text-align: center;
 `
+export const SectionTitle = styled.h2`
+    margin-top: 0;
+    margin-bottom: 25px;
+    
+    color: white;
+    text-shadow: 2px 2px 2px #250F99;
+
+    font-size: 35px;
+`
