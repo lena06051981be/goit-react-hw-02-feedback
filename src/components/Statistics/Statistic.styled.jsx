@@ -15,4 +15,3 @@ export const StatisticsList = styled.ul`
     flex-direction: column;
     gap: 4px;
 `
-// export const 
