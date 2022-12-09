@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const SectionStyle = styled.section`
     margin: 0 auto;
     margin-top: 40px;
-    padding: 40px 15px;
-    width: 480px;
+    padding: 40px 10px;
+    min-width: 340px;
+    max-width: 420px;
     
     border-radius: 12px;
     border: 1px solid darkcyan;
